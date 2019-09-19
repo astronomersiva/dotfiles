@@ -1,0 +1,121 @@
+function hugoVersion() {
+  cp ~/Home/web/setup/hugo/hugo_0.$1/hugo /usr/local/bin/hugo
+}
+
+function gup() {
+  git checkout `git log --reverse --ancestry-path HEAD..master | head -n 1 | cut -d \  -f 2`
+}
+
+function gdh() {
+  git --no-pager diff HEAD~$1
+}
+
+function gp() {
+  git push origin `git symbolic-ref --short HEAD`
+}
+
+function gpm() {
+  git push mirror `git symbolic-ref --short HEAD`
+}
+
+function gpod() {
+  if [ -z "$1" ]
+    then
+      git push origin --delete `git symbolic-ref --short HEAD`
+  else
+    git push origin --delete $1
+  fi
+}
+
+function gca() {
+  if [ -z "$1" ]
+    then
+      git commit --amend --reuse-message HEAD
+    else
+      git commit --amend --message=$1
+  fi
+}
+
+function gpf() {
+  git push --force-with-lease origin `git symbolic-ref --short HEAD`
+}
+
+function gpl() {
+  git pull origin `git symbolic-ref --short HEAD`
+}
+
+function gplm() {
+  git pull mirror `git symbolic-ref --short HEAD`
+}
+
+function unsetProxy() {
+  export HTTP_PROXY="";
+  export HTTPS_PROXY="";
+  export http_proxy="";
+  export https_proxy="";
+}
+
+function j() {
+  cd `autojump $1`
+}
+
+function whoHasPort() {
+  lsof -n -i :$1
+}
+
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias alert="echo -ne '\007'"
+
+alias k9="kill -9 "
+
+alias nrm="now rm -y "
+
+alias o="open ."
+alias vs="code ."
+alias a="atom ."
+
+alias rtd="rm -rf tmp/ dist/"
+alias rtdn="rm -rf node_modules/ tmp/ dist/"
+
+alias nin="npm install"
+alias nr="npm run"
+alias nt="npm test"
+alias nins="npm install --save"
+alias nind="npm install --save-dev"
+
+alias es="ember s"
+alias eds="DEBUG=* DEBUG_LEVEL=debug ember serve"
+alias et="ember test --serve"
+alias epb="ember build --environment=production"
+
+alias gdn="git checkout HEAD^"
+alias gmas="git checkout master"
+alias gch="git checkout"
+alias gchb="git checkout -b"
+alias gsq="git rebase -i "
+alias gcom="git commit -m "
+alias gcomt="git commit -m 'temp'"
+alias gct="git commit -m 'temp'"
+alias gs="git status"
+alias gd="git --no-pager diff"
+alias gdh1="git --no-pager diff HEAD~1"
+alias gdh2="git --no-pager diff HEAD~2"
+alias gl="git log"
+alias gad="git add"
+alias gpom="git pull origin master"
+alias gcp="git cherry-pick"
+alias grm="git rebase master"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias gcpc="git cherry-pick --continue"
+alias gchb="git checkout -b"
+alias gsh="git stash"
+alias gshp="git stash pop"
+alias uncommit="git reset HEAD^"
+
+alias clera="clear"
+alias cler="clear"
+alias claer="clear"
+
+alias chromeheadless="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --headless --remote-debugging-port=9222"
+alias chromecanary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
