@@ -7,7 +7,7 @@ function gup() {
 }
 
 function gdh() {
-  git --no-pager diff HEAD~$1
+  git diff HEAD~$1
 }
 
 function gp() {
@@ -87,6 +87,9 @@ alias es="ember s"
 alias eds="DEBUG=* DEBUG_LEVEL=debug ember serve"
 alias et="ember test --serve"
 alias epb="ember build --environment=production"
+function egc() {
+  ember generate component $1 --with-component-class
+}
 
 alias gdn="git checkout HEAD^"
 alias gmas="git checkout master"
@@ -97,9 +100,11 @@ alias gcom="git commit -m "
 alias gcomt="git commit -m 'temp'"
 alias gct="git commit -m 'temp'"
 alias gs="git status"
-alias gd="git --no-pager diff"
-alias gdh1="git --no-pager diff HEAD~1"
-alias gdh2="git --no-pager diff HEAD~2"
+alias gdbulk="git diff --no-pager"
+alias gd="git diff -w  --color | diff-so-fancy"
+alias gdh1="git diff HEAD~1"
+alias gdh2="git diff HEAD~2"
+#alias gdh2="git --no-pager diff HEAD~2"
 alias gl="git log"
 alias gad="git add"
 alias gpom="git pull origin master"
