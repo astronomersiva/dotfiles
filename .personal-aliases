@@ -63,6 +63,10 @@ function whoHasPort() {
   lsof -n -i :$1
 }
 
+alias c="clear"
+alias clera="clear"
+alias claer="clear"
+alias cleaer="clear"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias alert="echo -ne '\007'"
 
@@ -83,12 +87,12 @@ alias nt="npm test"
 alias nins="npm install --save"
 alias nind="npm install --save-dev"
 
-alias es="ember s"
-alias eds="DEBUG=* DEBUG_LEVEL=debug ember serve"
-alias et="ember test --serve"
-alias epb="ember build --environment=production"
+alias es="node_modules/.bin/ember s --port=0"
+alias eds="DEBUG=* DEBUG_LEVEL=debug node_modules/.bin/ember serve"
+alias et="node_modules/.bin/ember test --serve"
+alias epb="node_modules/.bin/ember build --environment=production"
 function egc() {
-  ember generate component $1 --with-component-class
+  node_modules/.bin/ember generate component $1 --with-component-class
 }
 
 alias gdn="git checkout HEAD^"

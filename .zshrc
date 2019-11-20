@@ -8,13 +8,16 @@
 # Speeds up load time
 DISABLE_UPDATE_PROMPT=true
 
+export EDITOR=nano
+export VISUAL="$EDITOR"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/Users/siva-3948/.nvm/versions/node/v8.12.0/bin:/Users/siva-3948/Home/web/setup/:/Users/siva-3948/Home/web/setup//kdiff3.app/Contents/MacOS:/Users/siva-3948/Home/web/setup//apache-ant-1.8.1/bin:/Users/siva-3948/Home/web/setup//gradle-2.12/bin:/Users/siva-3948/.yarn/bin:/Users/siva-3948/Home/web/setup/:/Users/siva-3948/Home/web/setup//kdiff3.app/Contents/MacOS:/Users/siva-3948/Home/web/setup//apache-ant-1.8.1/bin:/Users/siva-3948/Home/web/setup//gradle-2.12/bin:/Users/siva-3948/Home/web/setup/:/Users/siva-3948/Home/web/setup//kdiff3.app/Contents/MacOS:/Users/siva-3948/Home/web/setup//apache-ant-1.8.1/bin:/Users/siva-3948/Home/web/setup//gradle-2.12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/siva-3948/Home/web/setup//mysql/bin:/Users/siva-3948/Home/web/setup//mysql/bin:/usr/local/mysql/bin/:/Users/siva-3948/Home/web/setup//mysql/bin:$HOME/.cargo/bin
+export PATH=/Users/siva-3948/.nvm/versions/node/v8.12.0/bin:/Users/siva-3948/Home/web/setup/:/Users/siva-3948/Home/web/setup//kdiff3.app/Contents/MacOS:/Users/siva-3948/Home/web/setup//apache-ant-1.8.1/bin:/Users/siva-3948/Home/web/setup//gradle-2.12/bin:/Users/siva-3948/.yarn/bin:/Users/siva-3948/Home/web/setup/:/Users/siva-3948/Home/web/setup//kdiff3.app/Contents/MacOS:/Users/siva-3948/Home/web/setup//apache-ant-1.8.1/bin:/Users/siva-3948/Home/web/setup//gradle-2.12/bin:/Users/siva-3948/Home/web/setup/:/Users/siva-3948/Home/web/setup//kdiff3.app/Contents/MacOS:/Users/siva-3948/Home/web/setup//apache-ant-1.8.1/bin:/Users/siva-3948/Home/web/setup//gradle-2.12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/siva-3948/Home/web/setup//mysql/bin:/Users/siva-3948/Home/web/setup//mysql/bin:/usr/local/mysql/bin/:/Users/siva-3948/Home/web/setup//mysql/bin:$HOME/.cargo/bin:/Users/siva-3948/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
-
+export PATH=$PATH:/Users/siva-3948/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/siva-3948/.oh-my-zsh
